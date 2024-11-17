@@ -5,7 +5,7 @@ import { useData } from "./components/context/DataContext";
 import { Link } from "react-router-dom";
 import TemplateModel from "./components/Dialog/TemplateDialog";
 const EmailTemplate = () => {
-  const url = process.env.REACT_APP_TEMPLETE_URL;
+  const url = "https://email-auto-project-1lalmxwm8-vigneshwikkis-projects.vercel.app/getemplete";
   const [isHovered, setIsHovered] = useState(null);
   const [model, setModel] = useState(false);
   const [uploadtemplete, setuploademplte] = useState(false);
