@@ -36,6 +36,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "proxy": "https://email-auto-project-1lalmxwm8-vigneshwikkis-projects.vercel.app",
   "eslintConfig": {
     "extends": [
       "react-app",
