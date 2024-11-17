@@ -187,6 +187,11 @@ app.get("/templete", (req, res) => {
   res.send(newTemplate);
 });
 
+app.get("/",(req,res)=>{
+  res.send("Connected on vercel");
+}
+  );
+
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
