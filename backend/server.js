@@ -12,10 +12,11 @@ const cron = require("node-cron");
 const app = express();
 require("./DB");
 const cors = require("cors");
+app.use(cors({ origin: "https://email-auto-project-v9s8.vercel.app/" }));
 require("dotenv").config();
 const port = process.env.SERVER_PORT || 5000;
 app.use(express.json());
-app.use(cors({ origin: "*" }));
+
 app.use("/api", router);
 app.use(compression());
 app.use(bodyParser.json());
