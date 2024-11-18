@@ -22,7 +22,7 @@ const Campaign = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/campaigns");
+        const response = await fetch("https://email-auto-project-psi.vercel.app/api/campaigns");
         const data = await response.json();
         setCampaigns(data);
       } catch (error) {
