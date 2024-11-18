@@ -12,15 +12,19 @@ const cron = require("node-cron");
 const app = express();
 require("./DB");
 const cors = require("cors");
-app.use(cors({ origin: "https://email-auto-project-v9s8.vercel.app/" }));
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "https://email-auto-project-v9s8.vercel.app"); 
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization"); 
+  next();
+});
 require("dotenv").config();
 const port = process.env.SERVER_PORT || 5000;
 app.use(express.json());
-
-app.use("/api", router);
 app.use(compression());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use("/api", router);
 const upload = multer({ storage: storage });
 const templetePost = require("./routes/templete_post/EmailTemp_post");
 app.use(templetePost);
