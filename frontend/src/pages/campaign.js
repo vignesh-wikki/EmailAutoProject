@@ -41,14 +41,6 @@ const Campaign = () => {
           <h1 className="text-[#0C2136] pe-4   font-bold text-3xl">
             Your Campaigns
           </h1>
-          <div className="md:mt-0 mt-9">
-            <Button
-              onClick={openModal}
-              onRequestClose={closeModal}
-              size="medium"
-              text="Create Campaign"
-            />
-          </div>
         </div>
         <div className="flex container mx-auto justify-between mt-10 w-[75%]">
           <button
@@ -72,14 +64,13 @@ const Campaign = () => {
               />
             </svg>
           </button>
-          <div>
-            <button
-              type="submit"
-              className="inline-flex items-center h-10 px-8 ml-2 text-sm font-medium text-[#A1A1A1] bg-[#E0E0E0] rounded-lg border border-[#E0E0E0] hover:bg-[#E0E0E0] focus:ring-1 focus:ring-opacity-50 focus:outline-none focus:ring-[#0C2136] dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            >
-              Filter
-              <FontAwesomeIcon icon={faFilter} className="ml-2" />
-            </button>
+          <div className="md:mt-0 mt-9">
+            <Button
+              onClick={openModal}
+              onRequestClose={closeModal}
+              size="medium"
+              text="Create Campaign"
+            />
           </div>
         </div>
         <div className="flex flex-col container mx-auto justify-center mt-10">
