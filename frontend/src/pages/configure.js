@@ -246,7 +246,7 @@ function Configure({ signature }) {
       }
 
       const response = await axios.post(
-        "http://localhost:5000/submitForm",
+        "https://email-auto-project-psi.vercel.app/submitForm",
         formDataToSend,
         {
           headers: {
