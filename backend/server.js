@@ -12,7 +12,7 @@ const cron = require("node-cron");
 const app = express();
 require("./DB");
 const cors = require("cors");
-app.use(cors());
+app.use(cors({ origin: '*' }));
 require("dotenv").config();
 const port = process.env.SERVER_PORT || 5000;
 app.use(express.json());
